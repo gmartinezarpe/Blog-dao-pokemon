@@ -13,17 +13,20 @@
   -->
   <form action="/articles/{{#if id}}{{id}}/update{{else}}create{{/if}}" method="POST">
     <div class="mb-3">
-      <label for="title" class="form-label">Título</label>
+      <label for="title" class="form-label">Nombre de Pokémon</label>
       <input type="text" class="form-control" name="title" aria-describedby="titleHelp" required="true" value="{{title}}">
-      <div id="titleHelp" class="form-text">Utiliza un título ingenioso</div>
+      <div id="titleHelp" class="form-text">¿cual pokémon encontraste hoy?</div>
     </div>
     <div class="mb-3">
-      <label for="content" class="form-label">Contenido</label>
+      <label for="content" class="form-label">Caracteristicas</label>
       <textarea class="form-control" name="content" rows="3" aria-describedby="contentHelp">{{content}}</textarea>
-      <div id="contentHelp" class="form-text">¿Que quieres contar al mundo?</div>
+      <div id="contentHelp" class="form-text">¿que tan sorprendente es tu pokemon?</div>
     </div>
+    <input type="file" id="image_input" accept="image/png, image/jpg">
+    <div id:"display_image"></div>
     <div class="mb-3">
-      <button type="submit" class="btn btn-primary">Enviar</button>
+      <br>
+      <button type="submit" class="btn btn-primary">Enviar</button> 
     </div>
   </form>
 </div>
