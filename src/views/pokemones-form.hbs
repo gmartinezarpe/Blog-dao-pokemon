@@ -1,0 +1,39 @@
+{{> navbar}}
+<div class="container mt-3">
+  <h1>
+    {{#if id}}
+      Actualizando el artículo "{{pokemon}}" ({{id}})
+    {{else}}
+     Ingresa tu pokémon
+    {{/if}}
+  </h1>
+  <!--
+    Este formulario se usará tanto para edición como creación, este if nos dice que si viene un id, entonces será un update, si no, será un create.
+    Para el action, si viene un id será un post a /articles/:id/update, si no, será un post a /articles/create.
+  -->
+  <br>
+  <form action="/pokemones/{{#if id}}{{id}}/update{{else}}create{{/if}}" method="POST">
+    <div class="mb-3">
+      <label for="pokemon" class="form-label">Nombre de Pokémon</label>
+      <input type="text" class="form-control" name="pokemon" aria-describedby="pokemonHelp" required="true" value="{{pokemon}}">
+      <div id="pokemonHelp" class="form-text">¿cual pokémon encontraste hoy?</div>
+    </div>
+    <div class="mb-3">
+      <label for="category" class="form-label">Caracteristicas</label>
+      <textarea class="form-control" name="category" rows="3" aria-describedby="categoryHelp">{{category}}</textarea>
+      <div id="categoryHelp" class="form-text">¿que tan sorprendente es tu pokémon?</div>
+    </div>
+    <div class="mb-3">
+      <label for="ruta" class="form-label">Ruta de pokémon</label>
+      <input type="text" class="form-control" name="ruta" aria-describedby="rutaHelp" required="true" value="{{ruta}}">
+      <div id="rutaHelp" class="form-text">¿En que lugar encontraste tu pokémon?</div>
+    </div>
+    <label for="foto" class="form-label">Imagen de tu pokémon</label>
+    <input type="text" class="form-control" name="foto" aria-describedby="fotoHelp" required="true" value="{{foto}}">
+      <div id="pokemonHelp" class="form-text">Ingresa una URL de la imagen de tu Pókemon</div>
+    <div class="mb-3">
+      <br>
+      <button type="submit" class="btn btn-primary">Enviar</button> 
+    </div>
+  </form>
+</div>

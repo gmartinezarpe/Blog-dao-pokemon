@@ -1,6 +1,10 @@
 {{> navbar}}
 <div class="container mt-3">
   <header class="my-5">
+      <img 
+     src="/img/1200px-International_Pokémon_logo.svg.png"
+     width="300"
+    ><br><br>
     <h1>Bienvenido a mi blog</h1>
     <p>
      Acá encontraras los ultimos pokemones que he capturado 
@@ -9,12 +13,15 @@
   </header>
   <hr>
   <h3 class="mt-5 mb-3">Últimos artículos</h3>
-  {{#each articles}}
+  {{#each pokemones}}
     <div class="card mb-3">
       <div class="card-body">|
-        <h5 class="card-title">{{this.title}}</h5>
-        <p class="card-text">{{this.content}}</p>
-        <a href="/articles/{{this.id}}" class="btn btn-primary btn-sm">Leer más</a>
+     <b>Nombre de Pokémon:</b> <p class="card-title">{{this.pokemon}}</p>
+     <b>Caracteristicas:</b> <p class="card-text">{{this.category}}</p>
+     <b>Ruta:</b> <p class="card-text">{{this.ruta}}</p>
+        <img src="{{foto}}" width="250px" height="250px">
+
+        <a href="/pokemones/{{this.id}}" class="btn btn-primary btn-sm">Leer más</a>
       </div>
     </div>
   {{/each}}
