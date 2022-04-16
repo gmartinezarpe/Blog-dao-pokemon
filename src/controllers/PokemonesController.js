@@ -78,8 +78,6 @@ class pokemonesController {
 
     const pokemones = { pokemon, category, foto, ruta }
 
-    console.log(pokemones)
-
     try {
       const id = await this.PokemonesDAO.create(pokemones)
 
