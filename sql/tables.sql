@@ -1,7 +1,8 @@
 CREATE TABLE pokemones (
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	pokemon_name VARCHAR(90) NOT NULL,
-	class VARCHAR(255) NOT NULL,
-	foto_pokemon VARCHAR(255)
+	pokemon VARCHAR(90) NOT NULL,
+	category VARCHAR(255) NOT NULL, 
+	foto VARCHAR(255) NOT NULL,
+	ruta VARCHAR(255) NOT NULL
+	
 );
-
