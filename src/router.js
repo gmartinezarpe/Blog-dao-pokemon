@@ -1,5 +1,5 @@
 const express = require('express')
-const PokemonesController = require('./controllers/pokemonesController')
+const PokemonesController = require('./controllers/PokemonesController')
 const PageController = require('./controllers/PageController')
 const SqlClient = require('./lib/SqlClient')
 

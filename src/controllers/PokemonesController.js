@@ -1,6 +1,6 @@
 const PokemonesDAO = require('../models/dao/PokemonesDAO')
 
-class pokemonesController {
+class PokemonesController {
   constructor (db) {
     this.PokemonesDAO = new PokemonesDAO(db)
     this.renderHomeWithpokemones = this.renderHomeWithpokemones.bind(this)
@@ -131,4 +131,4 @@ class pokemonesController {
   }
 }
 
-module.exports = pokemonesController
+module.exports = PokemonesController
